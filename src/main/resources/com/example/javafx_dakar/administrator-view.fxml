@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_dakar.controller.AdministratorController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFD700;">
+         <children>
+            <Label layoutX="98.0" layoutY="25.0" text="Restaurants" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="39.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="74.0" prefHeight="437.0" prefWidth="931.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="411.0" prefWidth="330.0" style="-fx-background-color: #FFD700;">
+                     <children>
+                        <TextField fx:id="idField" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="300.0" promptText="ID (only for delete/ update)" />
+                        <TextField fx:id="nameField" layoutX="14.0" layoutY="48.0" prefHeight="27.0" prefWidth="300.0" promptText="Name" />
+                        <TextField fx:id="codeField" layoutX="14.0" layoutY="82.0" prefHeight="27.0" prefWidth="300.0" promptText="Code" />
+                        <Label fx:id="errorLabel" layoutX="14.0" layoutY="319.0" />
+                        <Button layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="25.0" prefWidth="120.0" text="CREATE" />
+                        <Button layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="25.0" prefWidth="120.0" text="UPDATE" />
+                        <Button layoutX="194.0" layoutY="345.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="25.0" prefWidth="120.0" text="SEARCH" />
+                        <Button layoutX="194.0" layoutY="375.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="25.0" prefWidth="120.0" text="DELETE" />
+                        <TextField fx:id="addressField" layoutX="22.0" layoutY="120.0" promptText="Address" />
+                        <TextField fx:id="foodTypeField" layoutX="22.0" layoutY="155.0" promptText="Food type" />
+                        <TextField fx:id="dishNameField" layoutX="22.0" layoutY="193.0" promptText="Dish name" />
+                        <TextField fx:id="dishTextField" layoutX="22.0" layoutY="231.0" prefHeight="43.0" prefWidth="291.0" promptText="Dish text" />
+                     </children></Pane>
+                  <Pane layoutX="357.0" layoutY="14.0" prefHeight="411.0" prefWidth="561.0" style="-fx-background-color: #FFD700;">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="411.0" prefWidth="561.0">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="20.5999755859375" text="ID" />
+                            <TableColumn fx:id="usernameColumn" prefWidth="78.79998779296875" text="Username" />
+                              <TableColumn fx:id="emailColumn" prefWidth="104.79995727539062" text="Email" />
+                              <TableColumn fx:id="nameColumn" prefWidth="74.0" text="Name" />
+                              <TableColumn fx:id="codeColumn" prefWidth="86.20001220703125" text="Code" />
+                              <TableColumn fx:id="foodTypeColumn" prefWidth="81.79998779296875" text="Food type" />
+                              <TableColumn fx:id="dishNameColumn" prefWidth="112.20001220703125" text="Dish name" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label alignment="CENTER_RIGHT" layoutX="596.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="Role:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupLabel" layoutX="674.0" layoutY="50.0" text="Administrator">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button layoutX="887.0" layoutY="13.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" text="Log out" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
